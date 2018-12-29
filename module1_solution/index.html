@@ -1,0 +1,18 @@
+<!docType html>
+<html language = "en">
+	<head>
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+		<script src="app.js"></script>
+	</head>
+	<body ng-app ="LunchCheck">
+		<div ng-controller = "LunchCheckController">
+			<h1>Lunch Checker</h1>
+					<!--  I do not consider an empty item, i.e., , , as an item towards to the count-->
+					Food Items : <br> <input type = "text" style = "width:40%" name = "foodValue" placeholder = "Enter comma- separated Food items here" ng-model = "inputString">
+					<br><br>
+					<button  ng-click="check()">Check If Too Much</button>
+					<br></br>
+					<div ng-bind = "message"></div>
+		</div>
+ 	</body>
+</html>
